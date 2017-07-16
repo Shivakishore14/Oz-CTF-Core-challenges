@@ -20,6 +20,9 @@ func LoadRoutes() {
 	challenge1 := r.PathPrefix("/challenge1").Subrouter()
 	challenge1.HandleFunc("/{file}", controller.Challenge1)
 
+	challenge2 := r.PathPrefix("/challenge2").Subrouter()
+	challenge2.HandleFunc("/", controller.Challenge2)
+
 	srv := &http.Server{
 		Handler:      r,
 		Addr:         address,
