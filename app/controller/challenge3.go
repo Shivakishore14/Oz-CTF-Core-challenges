@@ -9,6 +9,8 @@ import (
 	"github.com/Shivakishore14/OzCTF-Challenge/app/model"
 )
 
+//TODO:Add loginscreen and cookie
+
 func Challenge3(w http.ResponseWriter, r *http.Request) {
 	mike := model.C3User{Name: "mike", Hobbies: "Gaming", Secret: "I fear cats"}
 	dan := model.C3User{Name: "dam", Hobbies: "photography", Secret: "no secrets, am an open book :)"}
