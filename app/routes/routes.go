@@ -16,6 +16,10 @@ func LoadRoutes() {
 
 	r := mux.NewRouter()
 	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	r.PathPrefix("/challenge0/").Handler(http.StripPrefix("/challenge0/", http.FileServer(http.Dir("challenge0"))))
+	r.PathPrefix("/challenge5/").Handler(http.StripPrefix("/challenge5/", http.FileServer(http.Dir("challenge5"))))
+	r.PathPrefix("/challenge6/").Handler(http.StripPrefix("/challenge6/", http.FileServer(http.Dir("challenge6"))))
+	r.PathPrefix("/challenge7/").Handler(http.StripPrefix("/challenge7/", http.FileServer(http.Dir("challenge7"))))
 
 	challenge1 := r.PathPrefix("/challenge1").Subrouter()
 	challenge1.HandleFunc("/{file}", controller.Challenge1)
@@ -37,6 +41,7 @@ func LoadRoutes() {
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 	}
+
 	console.PrintSuccess("Listening on " + address)
 	log.Fatal(srv.ListenAndServe())
 }

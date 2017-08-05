@@ -9,12 +9,11 @@ import (
 
 func Challenge2(w http.ResponseWriter, r *http.Request) {
 	_, err := r.Cookie("flag")
-	if err != nil {
-		data := []byte("OZCTF{flag2}")
+	data := []byte("OZCTF{C00k1e5_Ar3_N0t_S0_S3cUr3}")
 
-		b64flag := base64.StdEncoding.EncodeToString(data)
-		w.Header().Set("Set-Cookie", "flag="+b64flag)
-	}
+	b64flag := base64.StdEncoding.EncodeToString(data)
+	w.Header().Set("Set-Cookie", "flag="+b64flag)
+
 	htmlFile, err := ioutil.ReadFile("./challenge2/welcome.html")
 	if err != nil {
 		fmt.Print(err)

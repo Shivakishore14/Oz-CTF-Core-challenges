@@ -15,7 +15,7 @@ func Challenge3(w http.ResponseWriter, r *http.Request) {
 	mike := model.C3User{Name: "mike", Hobbies: "Gaming", Secret: "I fear cats"}
 	dan := model.C3User{Name: "dam", Hobbies: "photography", Secret: "no secrets, am an open book :)"}
 	harry := model.C3User{Name: "harry", Hobbies: "Reading books", Secret: "Am really a wizard B)"}
-	kate := model.C3User{Name: "kate", Hobbies: "Gaming", Secret: "OZCTF{flag3}"}
+	kate := model.C3User{Name: "kate", Hobbies: "Football", Secret: "OZCTF{Qu3ry_P@rAms_ar3_us3full_:)}"}
 	t := template.New("example")
 	t, _ = t.Parse(`
 		<html>

@@ -51,7 +51,7 @@ func Challenge4GetFlag(w http.ResponseWriter, r *http.Request) {
 	key := r.FormValue("key")
 	if r.Method == "POST" {
 		if key == "awsmozkeys" {
-			fmt.Fprint(w, "OZCTF{flag4}")
+			fmt.Fprint(w, "OZCTF{Aw3S0me_j0b_H@ck_Th3_pL@n3t}")
 		} else {
 			fmt.Fprint(w, "wrong key")
 		}
